@@ -1,24 +1,35 @@
     import { useState } from "react";
+    import axios from "axios";
 
 
-    export default function Formulario({guardar}){
+    export default function Formulario(){
 
-
+const [tarea, setpruebas] = useState({
+    nombre: "",
+    prioridad: "",
+    categoria: "",
+    estado: ""
+})
         const handlerSubmit = (e) => {
-            e.preventDefault();
-              const id= (new Date()).getTime();
-            guardar({...tarea,id})
-        }
+          e.preventDefault();
 
-        const [tarea, setpruebas]= useState({
-        nombre:"",
-        prioridad:"",
-        categoria:"",
-        estado:""
+          const url ="https://api-tareas.ctpoba.edu.ar/api/tareas"
 
-
+          const config = {
+            headers: {Authorization: "48191338"}
+          }
+        
+        
+        axios.post(url, tarea, config)
+        .then((resp) =>{
+          console.log(resp)
+          alert('Tarea guardada')
         })
-
+        .catch((error) =>{
+          console.error(error)
+          alert('error al guardar')
+        })
+    }
         return(
             <div className="Formulario">
             <h1>Tarjetas Formulario!</h1>
@@ -52,4 +63,4 @@
           </form>
         </div>
         )
-    }
+      }
