@@ -47,10 +47,10 @@ const [tarea, setpruebas] = useState({
          </select>
 
 
-           <select onChange={(e) => setpruebas({...tarea,prioridad: e.target.value})}   value={tarea.prioridad}  >
-            <option value="alta">alta</option>
-             <option value="media">media</option>
-             <option value="baja">baja</option>
+           <select onChange={(e) => setpruebas({...tarea,prioridad: Number(e.target.value)})}   value={tarea.prioridad}  >
+            <option value="1">alta</option>
+             <option value="2">media</option>
+             <option value="3">baja</option>
          </select>
 
          <select onChange={(e) => setpruebas({...tarea,estado: e.target.value})}   value={tarea.estado}  >
