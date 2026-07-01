@@ -3,7 +3,6 @@
   margin: 0;
   padding: 0;
 }
-
 body {
   margin: 0;
   width: 100vw;
@@ -12,19 +11,16 @@ body {
   font-family: sans-serif;
   background-color: #f0f0f0;
 }
-
 #root {
   display: flex;
   flex: 1;
 }
-
 .App {
   display: flex;
   flex-direction: column;
   flex: 1;
   padding: 1.5rem;
 }
-
 .App > h1 {
   font-size: 22px;
   font-weight: 500;
@@ -32,19 +28,39 @@ body {
   color: #444;
 }
 
+/* Header */
+.Header {
+  display: flex;
+  gap: 12px;
+  padding: 1rem 1.5rem;
+  margin: -1.5rem -1.5rem 1.5rem -1.5rem;
+  background: #26a69a;
+  border-radius: 0 0 10px 10px;
+}
+.opcion {
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+.opcion:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
 .contenido {
   display: flex;
   gap: 16px;
   flex: 1;
 }
-
 .Botones {
   display: flex;
   flex-direction: column;
   gap: 8px;
   width: 180px;
 }
-
 .Botones button {
   padding: 9px;
   background: #5c6bc0;
@@ -54,11 +70,9 @@ body {
   font-size: 13px;
   cursor: pointer;
 }
-
 .Botones button:hover {
   background: #4a57a8;
 }
-
 .Botones select {
   padding: 8px;
   border-radius: 6px;
@@ -66,6 +80,18 @@ body {
   font-size: 13px;
   background: #fff;
   color: #444;
+}
+
+/* Inicio */
+.Inicio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+.Inicio p {
+  font-size: 16px;
+  color: #666;
 }
 
 .Listado {
@@ -76,7 +102,6 @@ body {
   flex: 1;
   align-content: flex-start;
 }
-
 .Listado h1 {
   width: 100%;
   font-size: 16px;
@@ -84,7 +109,6 @@ body {
   color: #555;
   margin-bottom: 0.5rem;
 }
-
 .Tarjeta {
   background: #fff;
   border: 1px solid #ddd;
@@ -95,23 +119,19 @@ body {
   gap: 10px;
   width: 220px;
 }
-
 .tarjeta-info {
   flex: 1;
 }
-
 .Tarjeta h2 {
   font-size: 15px;
   font-weight: 500;
   color: #333;
   margin-bottom: 4px;
 }
-
 .Tarjeta h3 {
   font-size: 13px;
   color: #888;
 }
-
 .tarjeta-footer {
   display: flex;
   justify-content: space-between;
@@ -119,7 +139,6 @@ body {
   border-top: 1px solid #eee;
   padding-top: 8px;
 }
-
 .Tarjeta select {
   font-size: 13px;
   padding: 4px 8px;
@@ -127,7 +146,6 @@ body {
   border: 1px solid #ccc;
   color: #444;
 }
-
 .Eliminar {
   font-size: 12px;
   color: #e57373;
@@ -136,12 +154,9 @@ body {
   padding: 4px 10px;
   cursor: pointer;
 }
-
 .Eliminar:hover {
   background: #fdecea;
 }
-
-
 .Formulario {
   background: #fff;
   border: 1px solid #ddd;
@@ -152,13 +167,11 @@ body {
   gap: 10px;
   width: 300px;
 }
-
 .Formulario h1 {
   font-size: 16px;
   font-weight: 500;
   color: #444;
 }
-
 .Formulario input,
 .Formulario select {
   width: 100%;
@@ -168,7 +181,6 @@ body {
   font-size: 13px;
   color: #444;
 }
-
 .Formulario button {
   padding: 9px;
   background: #5c6bc0;
@@ -178,7 +190,27 @@ body {
   font-size: 13px;
   cursor: pointer;
 }
-
 .Formulario button:hover {
   background: #4a57a8;
+}
+
+/* Footer */
+.Footer {
+  margin-top: auto;
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+  margin-bottom: -1.5rem;
+  padding: 1rem 1.5rem;
+  background: #37474f;
+  text-align: center;
+  border-radius: 10px 10px 0 0;
+}
+.Footer p {
+  font-size: 12px;
+  color: #000;
+}
+.Footer p:first-child {
+  font-weight: 500;
+  color: #000;
+  margin-bottom: 2px;
 }

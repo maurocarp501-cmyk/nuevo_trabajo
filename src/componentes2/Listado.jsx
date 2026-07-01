@@ -46,7 +46,7 @@ const eliminar = (tarea_id) => {
         headers: {Authorization: "48191338"}
     }
 
-    axios.put(url, config)
+    axios.delete(url, config)
     .then((resp) =>{
         console.log(resp.data)
         alert("se elimina la tarea")
